@@ -32,9 +32,16 @@ public class RestController {
         return "Hello from BridgeLabz - Delete";
     }
 
-   // query methods
+   // query for get methods
     @GetMapping("/hello/query")
         public String getQueryHello(@RequestParam String name) {
             return "Hello " + name + " from Bridgelabz";
         }
+
+        // param for get method
+        @GetMapping("/hello/param/{name}")
+        public String getparamHello(@PathVariable String name){
+            return "Hello "+ name + " from Bridgelabz ";
+        }
+
 }
