@@ -50,5 +50,11 @@ public class RestController {
 
             return "Hello "+user.getFirstName()+" "+user.getLastName()+" from BridgeLabz ";
         }
+        //Put method for UC5
+        @PutMapping("/hello/put/{first}")
+        public String getPutAndQueryHello(@PathVariable String first, @RequestParam String last){
+
+            return "Hello "+first+ " "+last + " from bridgrLabz";
+        }
 
 }
